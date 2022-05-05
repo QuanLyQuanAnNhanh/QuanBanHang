@@ -10,3 +10,6 @@ D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GU
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\bin\Debug\DTO.dll
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\bin\Debug\DTO.pdb
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\bin\Debug\BLL.pdb
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.LogIn.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.Main.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.Thumbnail.resources
