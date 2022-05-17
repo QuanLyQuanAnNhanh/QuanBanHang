@@ -2,3 +2,4 @@ D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\DT
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\DTO\bin\Debug\DTO.pdb
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\DTO\obj\Debug\DTO.dll
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\DTO\obj\Debug\DTO.pdb
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\DTO\bin\Debug\DTO.dll.config

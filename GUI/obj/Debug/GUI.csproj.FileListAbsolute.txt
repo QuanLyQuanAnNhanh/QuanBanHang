@@ -13,3 +13,10 @@ D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GU
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.LogIn.resources
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.Main.resources
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.Thumbnail.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.MonAn.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.TakeAway.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\bin\Debug\DAL.dll
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\bin\Debug\DAL.pdb
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.ThemMonAn.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.NhapNguyenLieu.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.ThemNLMoi.resources

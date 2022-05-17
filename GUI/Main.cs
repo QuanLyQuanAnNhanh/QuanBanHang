@@ -55,5 +55,10 @@ namespace GUI
                 }
             }
         }
+
+        private void btnTakeAway_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

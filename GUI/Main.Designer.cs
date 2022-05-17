@@ -30,20 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTakeAway = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnEatIn = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btn3Lines = new System.Windows.Forms.Button();
             this.lblMain = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnTakeAway = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.thumbnail1 = new GUI.Thumbnail();
             this.panelMain.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,21 +53,69 @@
             this.panelMain.Controls.Add(this.panel6);
             this.panelMain.Controls.Add(this.panel5);
             this.panelMain.Controls.Add(this.panel4);
-            this.panelMain.Controls.Add(this.panel3);
             this.panelMain.Controls.Add(this.panel1);
             this.panelMain.Controls.Add(this.btnTakeAway);
             this.panelMain.Controls.Add(this.btnThoat);
             this.panelMain.Controls.Add(this.btnNhanVien);
             this.panelMain.Controls.Add(this.btnThongKe);
-            this.panelMain.Controls.Add(this.btnEatIn);
             this.panelMain.Controls.Add(this.btnHome);
             this.panelMain.Controls.Add(this.btn3Lines);
             this.panelMain.Controls.Add(this.lblMain);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(291, 640);
+            this.panelMain.Size = new System.Drawing.Size(291, 584);
             this.panelMain.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.panel6.Location = new System.Drawing.Point(35, 351);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 53);
+            this.panel6.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.panel5.Location = new System.Drawing.Point(35, 272);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 53);
+            this.panel5.TabIndex = 14;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.panel4.Location = new System.Drawing.Point(35, 194);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 53);
+            this.panel4.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.panel1.Location = new System.Drawing.Point(35, 112);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 53);
+            this.panel1.TabIndex = 13;
+            // 
+            // btnTakeAway
+            // 
+            this.btnTakeAway.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTakeAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTakeAway.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTakeAway.Image = ((System.Drawing.Image)(resources.GetObject("btnTakeAway.Image")));
+            this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakeAway.Location = new System.Drawing.Point(42, 194);
+            this.btnTakeAway.Name = "btnTakeAway";
+            this.btnTakeAway.Size = new System.Drawing.Size(185, 53);
+            this.btnTakeAway.TabIndex = 12;
+            this.btnTakeAway.Tag = "EatOut";
+            this.btnTakeAway.Text = "  Take-Away";
+            this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTakeAway.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTakeAway.UseVisualStyleBackColor = false;
+            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeAway_Click);
             // 
             // btnThoat
             // 
@@ -78,9 +124,9 @@
             this.btnThoat.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(42, 575);
+            this.btnThoat.Location = new System.Drawing.Point(25, 474);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(185, 53);
+            this.btnThoat.Size = new System.Drawing.Size(202, 53);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Tag = "Exit";
             this.btnThoat.Text = "     Thoát";
@@ -96,7 +142,7 @@
             this.btnNhanVien.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(42, 426);
+            this.btnNhanVien.Location = new System.Drawing.Point(42, 351);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(185, 53);
             this.btnNhanVien.TabIndex = 4;
@@ -113,7 +159,7 @@
             this.btnThongKe.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(42, 347);
+            this.btnThongKe.Location = new System.Drawing.Point(42, 272);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(185, 53);
             this.btnThongKe.TabIndex = 3;
@@ -122,23 +168,6 @@
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = false;
-            // 
-            // btnEatIn
-            // 
-            this.btnEatIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnEatIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEatIn.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEatIn.Image = ((System.Drawing.Image)(resources.GetObject("btnEatIn.Image")));
-            this.btnEatIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEatIn.Location = new System.Drawing.Point(42, 193);
-            this.btnEatIn.Name = "btnEatIn";
-            this.btnEatIn.Size = new System.Drawing.Size(185, 53);
-            this.btnEatIn.TabIndex = 3;
-            this.btnEatIn.Tag = "EatIn";
-            this.btnEatIn.Text = "      Eat-In";
-            this.btnEatIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEatIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEatIn.UseVisualStyleBackColor = false;
             // 
             // btnHome
             // 
@@ -188,65 +217,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(291, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(865, 640);
+            this.panel2.Size = new System.Drawing.Size(865, 584);
             this.panel2.TabIndex = 1;
-            // 
-            // btnTakeAway
-            // 
-            this.btnTakeAway.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnTakeAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakeAway.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeAway.Image = ((System.Drawing.Image)(resources.GetObject("btnTakeAway.Image")));
-            this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeAway.Location = new System.Drawing.Point(42, 269);
-            this.btnTakeAway.Name = "btnTakeAway";
-            this.btnTakeAway.Size = new System.Drawing.Size(185, 53);
-            this.btnTakeAway.TabIndex = 12;
-            this.btnTakeAway.Tag = "EatOut";
-            this.btnTakeAway.Text = "  Take-Away";
-            this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTakeAway.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTakeAway.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.panel1.Location = new System.Drawing.Point(35, 112);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 53);
-            this.panel1.TabIndex = 13;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.panel3.Location = new System.Drawing.Point(35, 193);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 53);
-            this.panel3.TabIndex = 14;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.panel4.Location = new System.Drawing.Point(35, 269);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 53);
-            this.panel4.TabIndex = 14;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.panel5.Location = new System.Drawing.Point(35, 347);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 53);
-            this.panel5.TabIndex = 14;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.panel6.Location = new System.Drawing.Point(35, 426);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 53);
-            this.panel6.TabIndex = 14;
             // 
             // thumbnail1
             // 
@@ -259,7 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 640);
+            this.ClientSize = new System.Drawing.Size(1156, 584);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMain);
             this.Name = "Main";
@@ -277,7 +249,6 @@
         private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btn3Lines;
-        private System.Windows.Forms.Button btnEatIn;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnThongKe;
@@ -286,7 +257,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private Thumbnail thumbnail1;
     }
