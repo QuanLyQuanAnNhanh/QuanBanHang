@@ -3,59 +3,150 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DTO
 {
     public class MonAn
     {
-        private int maMonAn;
+        int maMonAn;
 
-        public int MaMonAn
+        public DataTable loadMonAn()
         {
-            get { return maMonAn; }
-            set { maMonAn = value; }
+            string sqlloadMonAn = @"select * from MONAN";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
 
-        private string tenMonAn;
-
-        public string TenMonAn
+        public DataTable loadDanhMucMonAnCanNhap()
         {
-            get { return tenMonAn; }
-            set { tenMonAn = value; }
+            string sqlloadMonAn = @"SELECT * FROM MONAN WHERE SLHIENCO < 10";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
 
-        private string loai;
-
-        public string Loai
+        public void themMonAn(string tenMonAn, string loai, string donViTinh, int gia)
         {
-            get { return loai; }
-            set { loai = value; }
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection);
+            int maMonAn = layMaMonAnGanNhat() + 1;
+            string sqlThemMonAn = @"INSERT INTO MONAN
+                                    VALUES(" + maMonAn + ", N'" + tenMonAn + "', N'" + loai + "', N'" + donViTinh + "', 0, " + gia + ")";
+            execSQL(sqlThemMonAn);
         }
 
-        private string donViTinh;
-
-        public string DonViTinh
+        public int layMaMonAnGanNhat()
         {
-            get { return donViTinh; }
-            set { donViTinh = value; }
+            string sqlloadMonAn = @"select COUNT(*) from MONAN";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                maMonAn = int.Parse(dt.Rows[0][0].ToString());
+            }
+            return maMonAn;
         }
 
-        private int soLuongTon;
-
-        public int SoLuongTon
+        public void suaGiaBan(int giaBan, int maMonAn)
         {
-            get { return soLuongTon; }
-            set { soLuongTon = value; }
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection);
+            conn.Open();
+            string sqlUpdateGiaMonAn = @"update MONAN
+                                         set GIA = " + giaBan + " where MAMONAN = " + maMonAn + "";
+            execSQL(sqlUpdateGiaMonAn);
+            conn.Close();
         }
 
-        private int giaBan;
-
-        public int GiaBan
+        public DataTable loadDSTenMonAn()
         {
-            get { return giaBan; }
-            set { giaBan = value; }
+            string sqlloadMonAn = @"select TENMONAN from MONAN";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
-        
-        
+
+        public DataTable loadDsLoaiMonAn()
+        {
+            string sqlloadMonAn = @"select LOAI from MONAN group by LOAI";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable traVeDSMonAnTheoLoai(string Loai)
+        {
+            string sqlloadMonAn = @"select * from MONAN where LOAI = N'" + Loai + "'";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable traVeMonAnTheoMa(int maMonAn)
+        {
+            string sqlloadMonAn = @"select * from MONAN where MAMONAN = " + maMonAn + "";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public void updateLaiSoLuongTheoMaMonAn(int maMonAn)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection);
+            conn.Open();
+            string sqlUpdateGiaMonAn = @"update MONAN
+                                         set SLHIENCO = SLHIENCO - 1 where MAMONAN = " + maMonAn + "";
+            execSQL(sqlUpdateGiaMonAn);
+            conn.Close();
+        }
+
+        public void updateLaiSoLuongTheoMaMonAnKhiHuyGoiMon(int maMonAn)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection);
+            conn.Open();
+            string sqlUpdateGiaMonAn = @"update MONAN
+                                         set SLHIENCO = SLHIENCO + 1 where MAMONAN = " + maMonAn + "";
+            execSQL(sqlUpdateGiaMonAn);
+            conn.Close();
+        }
+
+        public DataTable timKiemTheoMaMonAn(string maMonAn)
+        {
+            string sqlloadMonAn = @"select * from MonAn where MAMONAN = "+ maMonAn +"";
+            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public void execSQL(string sql)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection);
+            conn.Open();
+            SqlCommand cmd;
+            cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return;
+            }
+            cmd.Dispose();
+            cmd = null;
+            conn.Close();
+        }
+
     }
 }

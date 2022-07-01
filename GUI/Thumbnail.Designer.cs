@@ -71,12 +71,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 229);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(81, 236);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(278, 46);
+            this.label4.Size = new System.Drawing.Size(213, 38);
             this.label4.TabIndex = 3;
-            this.label4.Text = "    Với ba loại khác nhau như\r\n Hải Sản, Phô Mai và Thập Cẩm";
+            this.label4.Text = "    Với ba loại khác nhau như\r\n Hải sản, Phô mai và Thập cẩm";
             // 
             // label3
             // 

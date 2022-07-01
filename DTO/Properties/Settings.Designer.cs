@@ -33,5 +33,18 @@ namespace DTO.Properties {
                 return ((string)(this["BAN_QUAN_AN_NHANHConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-O3QUUSD1\\SQLEXPRESS;Initial Catalog=BAN_QUAN_AN_NHANH;Persist " +
+            "Security Info=True;User ID=sa;Password=123")]
+        public string Connection {
+            get {
+                return ((string)(this["Connection"]));
+            }
+            set {
+                this["Connection"] = value;
+            }
+        }
     }
 }

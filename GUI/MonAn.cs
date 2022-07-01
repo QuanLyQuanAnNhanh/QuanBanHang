@@ -61,6 +61,8 @@ namespace GUI
         {
             txtGiaBan.Enabled = true;
             txtGiaBan.Focus();
+            btnLưu.Enabled = true;
+            btnNhapMon.Enabled = btnThemMon.Enabled = false;
 
         }
 
@@ -77,11 +79,18 @@ namespace GUI
                 LoadMonAn();
                 MessageBox.Show("Sửa Thành Công");
                 txtGiaBan.Enabled = false;
+                btnLưu.Enabled = false;
+                btnNhapMon.Enabled = btnThemMon.Enabled = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

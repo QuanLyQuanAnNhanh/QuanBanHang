@@ -41,14 +41,17 @@
             this.cmbDonViTinh = new System.Windows.Forms.ComboBox();
             this.txtNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 42);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label1.Location = new System.Drawing.Point(121, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 22);
+            this.label1.Size = new System.Drawing.Size(256, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thêm Nguyên Liệu Mới";
             // 
@@ -87,7 +90,6 @@
             // 
             // txtSL
             // 
-            this.txtSL.Enabled = false;
             this.txtSL.Location = new System.Drawing.Point(210, 252);
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(224, 30);
@@ -99,9 +101,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(23, 255);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 22);
+            this.label4.Size = new System.Drawing.Size(165, 22);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Số Lượng";
+            this.label4.Text = "Số Lượng Chế Biến";
             // 
             // label5
             // 
@@ -138,29 +140,54 @@
             // 
             // txtNhap
             // 
-            this.txtNhap.Location = new System.Drawing.Point(63, 458);
+            this.txtNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtNhap.FlatAppearance.BorderSize = 0;
+            this.txtNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtNhap.ForeColor = System.Drawing.Color.White;
+            this.txtNhap.Location = new System.Drawing.Point(56, 458);
             this.txtNhap.Name = "txtNhap";
             this.txtNhap.Size = new System.Drawing.Size(126, 54);
             this.txtNhap.TabIndex = 12;
             this.txtNhap.Text = "Thêm";
-            this.txtNhap.UseVisualStyleBackColor = true;
+            this.txtNhap.UseVisualStyleBackColor = false;
             this.txtNhap.Click += new System.EventHandler(this.txtNhap_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(274, 458);
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(282, 458);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(126, 54);
             this.btnThoat.TabIndex = 13;
             this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.button1.Location = new System.Drawing.Point(445, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ThemNLMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 622);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.cmbDonViTinh);
@@ -175,9 +202,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThemNLMoi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemNLMoi";
             this.Load += new System.EventHandler(this.ThemNLMoi_Load);
             this.ResumeLayout(false);
@@ -200,5 +229,6 @@
         private System.Windows.Forms.ComboBox cmbDonViTinh;
         private System.Windows.Forms.Button txtNhap;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button button1;
     }
 }

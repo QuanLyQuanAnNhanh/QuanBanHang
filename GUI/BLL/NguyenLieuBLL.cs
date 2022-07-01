@@ -46,5 +46,15 @@ namespace BLL
         {
             nguyenLieuDAL.themNguyenLieuMoi(tenMonAn, tenNL, sLuong, DVT, Gia);
         }
+
+        public DataTable loadDSNguyenLieuCanNhapBLL()
+        {
+            return nguyenLieuDAL.loadDSNguyenLieuCanNhap();
+        }
+
+        public int kiemTraNguyenLieuBLL(string tenNL)
+        {
+            return nguyenLieuDAL.kiemTraNguyenLieuDAL(tenNL);
+        }
     }
 }

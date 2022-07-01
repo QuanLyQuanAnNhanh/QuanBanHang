@@ -56,9 +56,17 @@ namespace GUI
         {
             try
             {
-                
-                nguyenLieuBLL.ThemNguyenLieuMoiBLL(cmbTenMonAn.Text, txtTenNguyenLieu.Text, int.Parse(txtSL.Text), cmbDonViTinh.Text, int.Parse(txtGia.Text));
-                MessageBox.Show("Thêm Nguyên Liệu Mới Thành Công");
+                if (nguyenLieuBLL.kiemTraNguyenLieuBLL(txtTenNguyenLieu.Text) == 0)
+                {
+                    nguyenLieuBLL.ThemNguyenLieuMoiBLL(cmbTenMonAn.Text, txtTenNguyenLieu.Text, int.Parse(txtSL.Text), cmbDonViTinh.Text, int.Parse(txtGia.Text));
+                    MessageBox.Show("Thêm Nguyên Liệu Mới Thành Công");
+                    txtTenNguyenLieu.Text = "";
+                    txtTenNguyenLieu.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Nguyên Liệu Đã Có");
+                }
             }
             catch(Exception ex)
             {
@@ -67,6 +75,11 @@ namespace GUI
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

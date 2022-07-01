@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=LAPTOP-O3QUUSD1\SQLEXPRESS;Initial Catalog=BAN_QUAN_AN_NHANH;Persist Security Info=True;User ID=sa;Password=123</Value>
     </Setting>
+    <Setting Name="Connection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=LAPTOP-O3QUUSD1\SQLEXPRESS;Initial Catalog=BAN_QUAN_AN_NHANH;Persist Security Info=True;User ID=sa;Password=123</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

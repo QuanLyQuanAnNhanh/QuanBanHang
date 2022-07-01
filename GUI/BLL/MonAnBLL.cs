@@ -32,5 +32,40 @@ namespace BLL
         {
             return monAnDAL.loadDSTenMonAn();
         }
+
+        public DataTable loadDSLoaiMonAnBLL()
+        {
+            return monAnDAL.loadDsLoaiMonAn();
+        }
+
+        public DataTable loadDSMonAntheoLoaiBLL(string Loai)
+        {
+            return monAnDAL.traVeDSMonAnTheoLoai(Loai);
+        }
+
+        public DataTable loadDSTenMonAnTheoMaBLL(int maMonAn)
+        {
+            return monAnDAL.traVeMonAnTheoMa(maMonAn);
+        }
+
+        public void thucHienChinhSuaLaiSLKhiThemMonAn(int maMonAn)
+        {
+            monAnDAL.updateLaiSoLuongTheoMaMonAn(maMonAn);
+        }
+
+        public void thucHienChinhSuaLaiSLKhiHuyMonAn(int maMonAn)
+        {
+            monAnDAL.updateLaiSoLuongTheoMaMonAnKhiHuyGoiMon(maMonAn);
+        }
+
+        public DataTable loadMonAnCanNhap()
+        {
+            return monAnDAL.loadDanhMucMonAnCanNhap();
+        }
+
+        public DataTable timKiemTheoMaMonAnBLL(string maMonAn)
+        {
+            return monAnDAL.timKiemTheoMaMonAnDAL(maMonAn);
+        }
     }
 }

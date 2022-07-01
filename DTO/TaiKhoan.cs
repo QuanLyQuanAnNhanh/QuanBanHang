@@ -5,47 +5,26 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DTO
 {
     public class TaiKhoan
     {
-        private string user;
-
-        public string User
+        public int Check_Login(string user, string pass)
         {
-            get { return user; }
-            set { user = value; }
-        }
-
-        private string pass;
-
-        public string Pass 
-        {
-            get { return pass; }
-            set { pass = value; }
-        }
-
-        private int maNV;
-
-        public int MaNV
-        {
-            get { return maNV; }
-            set { maNV = value; }
-        }
-        
-        public TaiKhoan()
-        {
-            this.User = "";
-            this.Pass = "";
-            this.MaNV = 0;
-        }
-
-        public TaiKhoan(string User, string Pass, int MaNV)
-        {
-            this.User = User;
-            this.Pass = Pass;
-            this.MaNV = MaNV;
+            SqlDataAdapter da = new SqlDataAdapter("select * from TAIKHOAN where TENDN ='" + user + "' and MATKHAU ='" + pass + "'", Properties.Settings.Default.Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

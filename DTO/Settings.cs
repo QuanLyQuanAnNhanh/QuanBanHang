@@ -11,11 +11,11 @@ namespace DTO
     {
         public int check_Config()
         {
-            if(Properties.Settings.Default.BAN_QUAN_AN_NHANHConnectionString == string.Empty)
+            if (Properties.Settings.Default.Connection == string.Empty)
             {
                 return 1;
             }
-            SqlConnection _Sqlkn = new SqlConnection(Properties.Settings.Default.BAN_QUAN_AN_NHANHConnectionString);
+            SqlConnection _Sqlkn = new SqlConnection(Properties.Settings.Default.Connection);
             try
             {
                 if (_Sqlkn.State == System.Data.ConnectionState.Closed)

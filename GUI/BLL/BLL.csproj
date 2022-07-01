@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HoaDonBLL.cs" />
     <Compile Include="MonAnBLL.cs" />
     <Compile Include="NguyenLieuBLL.cs" />
+    <Compile Include="NhanVienBLL.cs" />
     <Compile Include="TaiKhoanBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

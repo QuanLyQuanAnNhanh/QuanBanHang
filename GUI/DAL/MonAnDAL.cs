@@ -11,87 +11,63 @@ namespace DAL
 {
     public class MonAnDAL
     {
-        string sqlconn = @"Data Source=LAPTOP-O3QUUSD1\SQLEXPRESS;Initial Catalog=BAN_QUAN_AN_NHANH;User ID=sa;Password=123";
-        int maMonAn;
+        MonAn monAn = new MonAn();
 
         public DataTable loadMonAn()
         {
-            SqlConnection conn = new SqlConnection(sqlconn);
-            conn.Open();
-            string sqlloadMonAn = @"select * from MONAN";
-            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, sqlconn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            return dt;
+            return monAn.loadMonAn();
+        }
+
+        public DataTable loadDanhMucMonAnCanNhap()
+        {
+            return monAn.loadDanhMucMonAnCanNhap();
         }
 
         public void themMonAn(string tenMonAn, string loai, string donViTinh, int gia)
         {
-            SqlConnection conn = new SqlConnection(sqlconn);
-            int maMonAn = layMaMonAnGanNhat() + 1;
-            string sqlThemMonAn = @"INSERT INTO MONAN
-                                    VALUES(" + maMonAn + ", N'" + tenMonAn + "', N'" + loai + "', N'" + donViTinh + "', 0, " + gia + ")";
-            execSQL(sqlThemMonAn);
-        }
-
-        public int layMaMonAnGanNhat()
-        {
-            SqlConnection conn = new SqlConnection(sqlconn);
-            conn.Open();
-            string sqlloadMonAn = @"select COUNT(*) from MONAN";
-            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, sqlconn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if(dt.Rows.Count > 0)
-            {
-                maMonAn = int.Parse(dt.Rows[0][0].ToString());
-            }
-            conn.Close();
-            return maMonAn;
-        }
-        
-        public void execSQL(string sql)
-        {
-            SqlConnection conn = new SqlConnection(sqlconn);
-            conn.Open();
-            SqlCommand cmd;
-            cmd = new SqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = sql;
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch 
-            {
-                return;
-            }
-            cmd.Dispose();
-            cmd = null;
-            conn.Close();
+            monAn.themMonAn(tenMonAn, loai, donViTinh, gia);
         }
 
         public void suaGiaBan(int giaBan, int maMonAn)
         {
-            SqlConnection conn = new SqlConnection(sqlconn);
-            conn.Open();
-            string sqlUpdateGiaMonAn = @"update MONAN
-                                         set GIA = " + giaBan + " where MAMONAN = " + maMonAn + "";
-            execSQL(sqlUpdateGiaMonAn);
-            conn.Close();
+            monAn.suaGiaBan(giaBan, maMonAn);
         }
 
         public DataTable loadDSTenMonAn()
         {
-            SqlConnection conn = new SqlConnection(sqlconn);
-            conn.Open();
-            string sqlloadMonAn = @"select TENMONAN from MONAN";
-            SqlDataAdapter da = new SqlDataAdapter(sqlloadMonAn, sqlconn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            return dt;
+            return monAn.loadDSTenMonAn();
         }
+
+        public DataTable loadDsLoaiMonAn()
+        {
+            return monAn.loadDsLoaiMonAn();
+        }
+
+        public DataTable traVeDSMonAnTheoLoai(string Loai)
+        {
+            return monAn.traVeDSMonAnTheoLoai(Loai);
+        }
+
+        public DataTable traVeMonAnTheoMa(int maMonAn)
+        {
+            return monAn.traVeMonAnTheoMa(maMonAn);
+        }
+
+        public void updateLaiSoLuongTheoMaMonAn(int maMonAn)
+        {
+            monAn.updateLaiSoLuongTheoMaMonAn(maMonAn);
+        }
+
+
+        public void updateLaiSoLuongTheoMaMonAnKhiHuyGoiMon(int maMonAn)
+        {
+            monAn.updateLaiSoLuongTheoMaMonAnKhiHuyGoiMon(maMonAn);
+        }
+
+        public DataTable timKiemTheoMaMonAnDAL(string maMonAn)
+        {
+            return monAn.timKiemTheoMaMonAn(maMonAn);
+        }
+
     }
 }

@@ -20,3 +20,7 @@ D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GU
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.ThemMonAn.resources
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.NhapNguyenLieu.resources
 D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.ThemNLMoi.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.ThongKe.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.CauHinh.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.NhanVien.resources
+D:\Nam 3\Phat Trien PhanMem Ung Dung Thong Minh\DoAnQuanLyBanHang\QuanBanHang\GUI\obj\Debug\GUI.TaiKhoan.resources

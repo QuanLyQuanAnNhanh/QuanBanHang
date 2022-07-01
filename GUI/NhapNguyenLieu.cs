@@ -95,6 +95,8 @@ namespace GUI
             {
                 txtSoLuongNguyenLieu.Text = "";
                 txtSoLuongNguyenLieu.Focus();
+                btnLuu.Enabled = true;
+                btnThemMoiNguyenLieu.Enabled = false;
             }
             catch(Exception ex)
             {
@@ -115,6 +117,8 @@ namespace GUI
             {
                 nguyenLieuBLL.ThemHoaDonNhapBLL(cmbTenNguyenLieu.Text, int.Parse(txtSoLuongNguyenLieu.Text));
                 dataGridView_NguyenLieu.DataSource = nguyenLieuBLL.loadNguyenLieu();
+                btnLuu.Enabled = false;
+                btnThemMoiNguyenLieu.Enabled = true;
                 MessageBox.Show("Thêm Thành Công");
             }
             catch(Exception ex)
@@ -129,6 +133,35 @@ namespace GUI
             ThemNLMoi fThemNLMoi = new ThemNLMoi();
             fThemNLMoi.ShowDialog();
             dataGridView_NguyenLieu.DataSource = nguyenLieuBLL.loadNguyenLieu();
+        }
+
+        private void cbMonAnCanNhap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbMonAnCanNhap.Checked)
+            {
+                dataGridView_MonAn.DataSource = monAnBLL.loadMonAnCanNhap();
+            }
+            else
+            {
+                dataGridView_MonAn.DataSource = loadMonAn();
+            }
+        }
+
+        private void cbNguyenLieuCanNhap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbNguyenLieuCanNhap.Checked)
+            {
+                dataGridView_NguyenLieu.DataSource = nguyenLieuBLL.loadDSNguyenLieuCanNhapBLL();
+            }
+            else
+            {
+                dataGridView_NguyenLieu.DataSource = loadNguyenLieu();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
